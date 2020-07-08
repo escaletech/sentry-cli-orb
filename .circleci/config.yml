@@ -13,7 +13,7 @@ workflows:
             - orb-tools/lint
       - orb-tools/publish-dev:
           context: org-global
-          orb-name: picturepipe/sentry-cli
+          orb-name: escaletech/sentry-cli
           requires:
             - orb-tools/pack
           filters:
