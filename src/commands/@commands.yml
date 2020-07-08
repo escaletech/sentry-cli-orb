@@ -51,7 +51,7 @@ create-release:
         command: |
           VERSION=$(cat sentry-release-version.txt)
           sentry-cli releases --org "${<< parameters.org >>}" new \
-            --project "${<< parameters.project >>}" "${VERSION}"
+            --project << parameters.project >> "${VERSION}"
 finalize-release:
   description: >
     Finalize a Sentry release. Execute only once per release.
